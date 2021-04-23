@@ -26,4 +26,9 @@ public class Dog extends Animal{
         else if (a>10) System.out.println("Собакен "+ this.getName()+" проплыл 10 метров и устал, дистанция в "+ a + " метров для него тяжеловата");
         else System.out.println("Собакен "+ this.getName()+" проплыл "+a+" метров");
     }
+
+    @Override
+    public void Eat(PlateFood a) {
+
+    }
 }
