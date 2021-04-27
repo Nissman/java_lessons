@@ -192,7 +192,6 @@ public class Window extends JFrame {
 
         buttons[xF][yF].setEnabled(false);
         buttons[xF][yF].setDisabledIcon(ICON_O);
-        //field[xF - 1][yF - 1] = O;
 
 
     }
