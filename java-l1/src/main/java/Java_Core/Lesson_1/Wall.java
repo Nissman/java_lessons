@@ -14,4 +14,5 @@ public class Wall implements  Barier{
     public String getType() {
         return type;
     }
+
 }

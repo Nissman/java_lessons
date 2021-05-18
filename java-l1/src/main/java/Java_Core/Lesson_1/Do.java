@@ -7,5 +7,4 @@ public interface Do {
     int GetMaxJump();
     int GetMaxRun();
     boolean dO2(Barier o);
-
 }
