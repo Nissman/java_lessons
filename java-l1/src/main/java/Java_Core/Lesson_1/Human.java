@@ -21,52 +21,23 @@ public class Human implements Do{
         System.out.println("Человек "+getName()+" прыгает");
     }
 
-
-
     @Override
-    public boolean overcomingTheObstacleCourse(Barier o, int x) {
+    public void dO(Barier o) {
         if (o.getType()=="track"){
             if (o.GetDistance() <= GetMaxRun()) {
                 run();
             }
-            else {
-                switch (x) {
-                    case 1:
-                    {
-                        System.out.println("Человек "+getName()+" не может пробежать "+o.GetDistance());
-                        break;
-                    }
-                    case 2:
-                    {
-                        System.out.println("Для "+getName()+" это предел");
-                        return false;
-                    }
-                }
-            }
+            else System.out.println("Человек "+getName()+" не может пробежать "+o.GetDistance());
+
         }
         else if(o.getType()=="wall"){
             if (o.GetDistance() <= GetMaxJump()) {
                 jump();
             }
-            else{
-                switch (x) {
-                    case 1:
-                    {
-                        System.out.println("Человек "+getName()+" не может прыгнуть "+o.GetDistance());
-                        break;
-                    }
-                    case 2:
-                    {
-                        System.out.println("Для "+getName()+" это предел");
-                        return false;
-                    }
-                }
-            }
+            else System.out.println("Человек "+getName()+" не может прыгнуть "+o.GetDistance());
         }
-        return true;
+
     }
-
-
     @Override
     public int GetMaxJump() {
         return maxJump;
@@ -77,4 +48,27 @@ public class Human implements Do{
         return maxRun;
     }
 
+    @Override
+    public boolean dO2(Barier o) {
+        if (o.getType()=="track"){
+            if (o.GetDistance() <= GetMaxRun()) {
+                run();
+            }
+            else {
+                System.out.println("Для "+getName()+" это предел");
+                return false;}
+        }
+        else if(o.getType()=="wall"){
+            if (o.GetDistance() <= GetMaxJump()) {
+                jump();
+            }
+
+            else{
+                System.out.println("Для "+getName()+" это предел");
+                return false;}
+        }
+
+        return true;
+
+    }
 }

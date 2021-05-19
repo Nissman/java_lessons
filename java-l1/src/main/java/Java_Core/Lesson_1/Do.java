@@ -3,9 +3,9 @@ package Java_Core.Lesson_1;
 public interface Do {
     void run();
     void jump();
-    boolean overcomingTheObstacleCourse(Barier o, int x);
+    void dO(Barier o);
     int GetMaxJump();
     int GetMaxRun();
-
+    boolean dO2(Barier o);
 
 }
