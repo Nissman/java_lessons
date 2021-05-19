@@ -34,11 +34,11 @@ int mainY=y;
             {
                 boolean b = members[i].overcomingTheObstacleCourse(bariers[j], y);
                 if (!b) {
-                    y = 3;
+
                     break;
                 }
 
-            } else break;
+            }
         }
         System.out.println();
         y=mainY;
