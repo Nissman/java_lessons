@@ -23,7 +23,7 @@ public class HW_lesson_1 {
     }
 
 static void overcoming(Do[] members, Barier[] bariers, int y){
-int mainY=y;
+
     for (int i = 0; i < members.length; i++) {
         for (int j = 0; j < bariers.length; j++) {
             if (y == 1)//РЕШЕНИЕ ЗАДАНИЯ БЕЗ ЗВЕЗДОЧКИ
@@ -34,14 +34,14 @@ int mainY=y;
             {
                 boolean b = members[i].overcomingTheObstacleCourse(bariers[j], y);
                 if (!b) {
-                    y = 3;
+
                     break;
                 }
 
             } else break;
         }
         System.out.println();
-        y=mainY;
+
             }
     }
 
